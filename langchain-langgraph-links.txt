@@ -1,1 +1,3 @@
+langchain azure - package and labs
 
+https://github.com/langchain-ai/langchain-azure
