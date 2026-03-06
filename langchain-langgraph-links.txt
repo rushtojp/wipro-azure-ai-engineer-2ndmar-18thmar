@@ -1,3 +1,7 @@
 langchain azure - package and labs
 
 https://github.com/langchain-ai/langchain-azure
+
+Agentic Azure App Service app with LangGraph and Foundry Agent Service
+
+https://github.com/Azure-Samples/app-service-agentic-langgraph-foundry-python
