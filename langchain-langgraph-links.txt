@@ -4,4 +4,6 @@ https://github.com/langchain-ai/langchain-azure
 
 Agentic Azure App Service app with LangGraph and Foundry Agent Service
 
+Tutorial : https://learn.microsoft.com/en-us/azure/app-service/tutorial-ai-agent-web-app-langgraph-foundry-python?tabs=langgraph
+
 https://github.com/Azure-Samples/app-service-agentic-langgraph-foundry-python
