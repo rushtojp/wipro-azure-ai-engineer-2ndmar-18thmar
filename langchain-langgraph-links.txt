@@ -11,3 +11,7 @@ https://github.com/Azure-Samples/app-service-agentic-langgraph-foundry-python
 comparison between langchain, langgraph and langsmith
 
 https://docs.langchain.com/oss/python/concepts/products#agent-frameworks-like-langchain
+
+python learn langchain tutorials
+
+https://docs.langchain.com/oss/python/learn
