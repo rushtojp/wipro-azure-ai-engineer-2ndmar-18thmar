@@ -1,0 +1,42 @@
+In the world of LangChain, a Runnable is the fundamental building block of the LangChain Expression Language (LCEL).
+
+Think of it as a standardized "unit of work." By making different components (like LLMs, prompts, and output parsers) follow the same "Runnable" protocol, LangChain allows you to chain them together seamlessly using the pipe operator (|).
+
+1. The Core Idea: Consistency
+Before Runnables, every object in LangChain had different method names—one might use .predict(), another .call(), and another .generate().
+
+Now, every Runnable implements a standard set of methods:
+
+invoke: Call the chain on a single input.
+
+batch: Call the chain on a list of inputs (optimized for parallel processing).
+
+stream: Stream back chunks of the response as they are generated.
+
+astream_log: Stream back intermediate steps as they happen.
+
+2. How the Chain Works
+When you see code like this:
+chain = prompt | model | output_parser
+
+Each piece is a Runnable. The output of the prompt becomes the input for the model, and the output of the model becomes the input for the output_parser.
+
+3. Key Components that are Runnables
+Most things you use in LangChain are secretly Runnables:
+
+Models: ChatOpenAI, Anthropic, etc.
+
+Prompts: ChatPromptTemplate.
+
+Output Parsers: PydanticOutputParser, StrOutputParser.
+
+Retrievers: Vector store search tools.
+
+Functions: You can turn any Python function into a Runnable using RunnableLambda.
+
+Why should you care?
+Parallelization: If you use .batch(), LangChain automatically runs your inputs in parallel where possible, saving a ton of time.
+
+Async Support: Every Runnable has an async version (e.g., .ainvoke), making it easier to build web apps.
+
+Observability: Because the interface is standardized, tools like LangSmith can easily trace exactly what happened at every step of the chain.
